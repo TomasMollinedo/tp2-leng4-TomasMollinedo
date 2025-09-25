@@ -1,4 +1,4 @@
-import "./SubidorImagenes.css";
+import "../styles/SubidorImagenes.css";
 
 function SubidorImagenes() {
   function procesar(e) {

@@ -11,6 +11,9 @@ function Encabezado (){
 			</NavLink>{" | "}
 			<NavLink to="/" end>
 				Inicio
+			</NavLink>{" | "}
+			<NavLink to="/Contacto" end>
+				Contacto
 			</NavLink>
 		</nav>
 		</>

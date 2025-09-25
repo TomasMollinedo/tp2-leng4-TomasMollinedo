@@ -1,0 +1,111 @@
+:root{
+  --text: #e9e9e9;
+  --muted: #c9c9c9;
+
+  /* Fondo de inputs más claro */
+  --input-bg: #2c2c2c;                /* << antes era más oscuro */
+  --input-border: rgba(255,255,255,.22);
+
+  /* Anillos/focus */
+  --focus-ring: 0 0 0 3px rgba(34,197,94,.22); /* verde suave */
+
+  /* Botón */
+  --btn-base: #d4d4d4;   /* gris claro por defecto */
+  --btn-text: #111;      /* texto oscuro en el botón */
+  --btn-hover: #22c55e;  /* verde al hover */
+}
+
+/* El formulario en grilla */
+.contacto-form{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+/* En pantallas medias, dos columnas… con MÁS espacio entre columnas */
+@media (min-width: 640px){
+  .contacto-form{
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    column-gap: 28px;              /* << más separación entre Nombre y Email */
+  }
+  .fila-completa{
+    grid-column: 1 / -1;
+  }
+}
+
+/* Grupo campo + label */
+.campo{
+  display: grid;
+  gap: 6px;
+}
+
+.campo label{
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* Inputs/textarea más claros */
+.input,
+.textarea{
+  width: 100%;
+  background: var(--input-bg);     /* << más claro */
+  color: var(--text);
+  border: 1px solid var(--input-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .02s ease-in;
+}
+
+.input:hover,
+.textarea:hover{
+  border-color: rgba(255,255,255,.30);
+}
+
+.input:focus,
+.textarea:focus{
+  border-color: var(--btn-hover);
+  box-shadow: var(--focus-ring);
+}
+
+/* Textarea un poco más alta */
+.textarea{
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* Botón: gris claro -> verde en hover */
+.boton-enviar{
+  width: 100%;
+  background: var(--btn-base);   /* gris claro */
+  color: var(--btn-text);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease, transform .06s ease, box-shadow .2s ease;
+}
+
+.boton-enviar:hover{
+  background: var(--btn-hover);  /* verde */
+  color: #052e16;                /* verde muy oscuro para contraste */
+}
+
+.boton-enviar:active{
+  transform: translateY(1px) scale(.995);
+}
+
+.boton-enviar:focus{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212,212,212,.45); /* anillo visible en gris */
+}
+
+/* Placeholders */
+.input::placeholder,
+.textarea::placeholder{
+  color: #a9a9a9;
+}
