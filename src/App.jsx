@@ -1,15 +1,23 @@
 import './App.css'
 import Encabezado from './Componentes/Encabezado'
-import SubidorImagenes from './Componentes/SubidorImagenes'
+import {BrowserRouter, Routes, Route } from 'react-router-dom'
+import Uploader from './Paginas/Uploader'
+
+function Home() { return null; }
 
 function App() {
 
   return (
     <>
-			<Encabezado/>
-      <SubidorImagenes/>
+      <BrowserRouter>
+        <Encabezado/>
+      <Routes>
+				<Route path="/" element={<Home/>}/>
+				<Route path="/Uploader" element={<Uploader/>}/>
+			</Routes>
+      </BrowserRouter>
 		</>
   )
 }
 
-export default App
+export default App;

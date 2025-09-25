@@ -36,7 +36,7 @@ function SubidorImagenes() {
   return (
     <div className="subidor">
       <section id="cajainput">
-        <h1>Trabajo practico 4 - Tomás Mollinedo</h1>
+        <h1>Trabajo práctico N°3</h1>
         <h2>Subir imagen y validar usando File API</h2>
 
         <label htmlFor="archivos">Selecciona una imagen </label>
