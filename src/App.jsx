@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='/tp2-leng4-TomasMollinedo'>
         <Encabezado/>
       <Routes>
 				<Route path="/" element={<Home/>}/>
